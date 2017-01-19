@@ -377,7 +377,8 @@ Card.makeConfig = (config = {}) => {
     allowedDirections: [
       Direction.RIGHT,
       Direction.LEFT,
-      Direction.UP
+      Direction.UP,
+      Direction.DOWN
     ],
     isThrowOut: Card.isThrowOut,
     maxRotation: 20,

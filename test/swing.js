@@ -215,10 +215,17 @@ describe('DOM', () => {
           }, 20);
 
           setTimeout(() => {
-            expect(spy.callCount).to.equal(3);
+            env.card.trigger('panmove', {
+              deltaX: 13,
+              deltaY: 10
+            });
+          }, 30);
+
+          setTimeout(() => {
+            expect(spy.callCount).to.equal(4);
 
             done();
-          }, 30);
+          }, 40);
         });
       });
       describe('transform', () => {
@@ -249,10 +256,17 @@ describe('DOM', () => {
           }, 20);
 
           setTimeout(() => {
-            expect(spy.callCount).to.equal(3);
+            env.card.trigger('panmove', {
+              deltaX: 13,
+              deltaY: 10
+            });
+          }, 30);
+
+          setTimeout(() => {
+            expect(spy.callCount).to.equal(4);
 
             done();
-          }, 30);
+          }, 40);
         });
       });
     });
